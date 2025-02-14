@@ -18,33 +18,26 @@ const db = new sqlite3.Database(sqlitePath);
 
 const employees = [
   {
-    full_name: 'John Doe'
-  },
-  {
-    full_name: 'Jane Smith'
-  },
-  {
-    full_name: 'Alice Johnson'
+    full_name: 'John Doe',
+    email : 'hello@gmail.com',
+    phone_number : '72182682',
+    date_of_birth : '2003-2-10',
+    gender : 'male',
+    job_title : 'Engineer',
+    department : 'Development',
+    salary : '1200',
+    start_date : '2024-02-10 08:00:00',
+    end_date : '2024-02-10 08:00:00',
   },
 ];
 
-const timesheets = [
-  {
-    employee_id: 1,
-    start_time: '2025-02-10 08:00:00',
-    end_time: '2025-02-10 17:00:00',
-  },
-  {
-    employee_id: 2,
-    start_time: '2025-02-11 12:00:00',
-    end_time: '2025-02-11 17:00:00',
-  },
-  {
-    employee_id: 3,
-    start_time: '2025-02-12 07:00:00',
-    end_time: '2025-02-12 16:00:00',
-  },
-];
+// const timesheets = [
+//   {
+//     employee_id: 1,
+//     start: '',
+//     end: '',
+//   },
+// ];
 
 
 const insertData = (table, data) => {
@@ -62,7 +55,7 @@ const insertData = (table, data) => {
 
 db.serialize(() => {
   insertData('employees', employees);
-  insertData('timesheets', timesheets);
+  // insertData('timesheets', timesheets);
 });
 
 db.close(err => {
