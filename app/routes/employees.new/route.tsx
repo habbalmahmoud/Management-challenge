@@ -43,7 +43,7 @@ export default function NewEmployeePage() {
         </div>
         <div>
           <label htmlFor="date_of_birth">Date of Birth</label>
-          <input type="text" name="date_of_birth" id="date_of_birth" required />
+          <input type="date" name="date_of_birth" id="date_of_birth" required />
         </div>
         <div>
           <label htmlFor="gender">Gender</label>
@@ -63,11 +63,11 @@ export default function NewEmployeePage() {
         </div>
         <div>
           <label htmlFor="start_date">Start Date</label>
-          <input type="text" name="start_date" id="start_date" required />
+          <input type="date" name="start_date" id="start_date" required />
         </div>
         <div>
           <label htmlFor="end_date">End Date</label>
-          <input type="text" name="end_date" id="end_date"/>
+          <input type="date" name="end_date" id="end_date"/>
         </div>
         <button type="submit">Create Employee</button>
       </Form>

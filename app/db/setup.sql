@@ -19,7 +19,7 @@ DROP TABLE IF EXISTS timesheets;
 CREATE TABLE employees (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     full_name TEXT,
-    email TEXT UNIQUE NULL,
+    email TEXT NULL,
     phone_number TEXT NULL,
     date_of_birth DATE,
     gender TEXT NULL,
